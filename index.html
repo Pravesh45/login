@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./jQueryUI/jquery-ui.structure.css">
+    <link rel="stylesheet" href="./jQueryUI/jquery-ui.css">
+    <link rel="stylesheet" href="./jQueryUI/jquery-ui.theme.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <form id="login" action="./index.html">
+    <h1>Login</h1>
+  <div class="inp">
+   <input type="text" id="un">
+   <span data-placeholder="UserName"></span>
+  </div>
+   <div class="inp">
+     <input type="password" id="pass">
+     <span data-placeholder="Password"></span>
+   </div>
+   <button type="submit" id="sub">Sign In</button>
+   <br><br>
+   <div id="bottomtext">Don't have an Account?<a href="#">SignUp</a></div>
+  </form>
+ 
+  </body>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script src="jQueryUI/jquery-ui.js"></script>
+  <script>
+  $("input").on("focus",function(){
+    $(this).addClass("focus");
+  });
+  $("input").on("blur",function(){
+    if($(this).val() == "")
+    $(this).removeClass("focus");
+  })
+  </script>
+</html>
